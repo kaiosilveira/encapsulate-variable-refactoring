@@ -1,15 +1,18 @@
-const { defaultOwner, setDefaultOwner } = require('./default-owner');
+(() => {
+  'use strict';
 
-let spaceship = { name: 'Nebuchadnezzar' };
+  const { defaultOwner, setDefaultOwner } = require('./default-owner');
 
-const owner = defaultOwner();
-spaceship.owner = owner;
+  let spaceship = { name: 'Nebuchadnezzar' };
 
-setDefaultOwner({ firstName: 'Gabriella', lastName: 'Caetano' });
+  const owner = defaultOwner();
+  spaceship.owner = owner;
 
-// lots of spaghetti code
+  setDefaultOwner({ firstName: 'Gabriella', lastName: 'Caetano' });
 
-owner.firstName = 'Morpheus';
-owner.lastName = '';
+  // lots of spaghetti code
 
-console.log(spaceship.owner);
+  setDefaultOwner({ firstName: 'Morpheus', lastName: '' });
+
+  console.log(spaceship.owner);
+})();
