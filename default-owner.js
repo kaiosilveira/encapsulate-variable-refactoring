@@ -1,11 +1,13 @@
-let defaultOwnerData = { firstName: 'Kaio', lastName: 'Silveira' };
+const Person = require('./person');
+
+let defaultOwnerData = new Person({ firstName: 'Kaio', lastName: 'Silveira' });
 
 function defaultOwner() {
-  return Object.assign({}, defaultOwnerData);
+  return new Person(defaultOwnerData);
 }
 
 function setDefaultOwner(arg) {
-  defaultOwnerData = arg;
+  defaultOwnerData = new Person(arg);
 }
 
 module.exports = { defaultOwner, setDefaultOwner };
