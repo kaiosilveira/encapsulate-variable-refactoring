@@ -1,11 +1,11 @@
-let defaultOwner = { firstName: 'Kaio', lastName: 'Silveira' };
+let defaultOwnerData = { firstName: 'Kaio', lastName: 'Silveira' };
 
-function getDefaultOwner() {
-  return defaultOwner;
+function defaultOwner() {
+  return defaultOwnerData;
 }
 
 function setDefaultOwner(arg) {
-  defaultOwner = arg;
+  defaultOwnerData = arg;
 }
 
-module.exports = { getDefaultOwner, setDefaultOwner };
+module.exports = { defaultOwner, setDefaultOwner };

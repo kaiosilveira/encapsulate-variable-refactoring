@@ -1,8 +1,8 @@
-const { getDefaultOwner, setDefaultOwner } = require('./default-owner');
+const { defaultOwner, setDefaultOwner } = require('./default-owner');
 
 let spaceship = { name: 'Nebuchadnezzar' };
 
-const owner = getDefaultOwner();
+const owner = defaultOwner();
 spaceship.owner = owner;
 
 setDefaultOwner({ firstName: 'Gabriella', lastName: 'Caetano' });

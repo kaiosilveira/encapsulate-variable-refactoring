@@ -1,9 +1,9 @@
-const { getDefaultOwner, setDefaultOwner } = require('./default-owner');
+const { defaultOwner, setDefaultOwner } = require('./default-owner');
 
 describe('defaultOwner', () => {
   describe('getDefaultOwner', () => {
     it('should return the default owner', () => {
-      const owner = getDefaultOwner();
+      const owner = defaultOwner();
       expect(owner.firstName).toEqual('Kaio');
       expect(owner.lastName).toEqual('Silveira');
     });
@@ -13,7 +13,7 @@ describe('defaultOwner', () => {
     it('should change the default owner', () => {
       setDefaultOwner({ firstName: 'Enzo', lastName: 'Silveira' });
 
-      const owner = getDefaultOwner();
+      const owner = defaultOwner();
       expect(owner.firstName).toEqual('Enzo');
       expect(owner.lastName).toEqual('Silveira');
     });
