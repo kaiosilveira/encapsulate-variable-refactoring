@@ -1,0 +1,14 @@
+{
+  "name": "encapsulate-variable",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kaiosilveira/encapsulate-variable-refactoring.git",
+  "author": "Kaio Silveira",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --passWithNoTests"
+  },
+  "devDependencies": {
+    "jest": "^29.0.1"
+  }
+}
